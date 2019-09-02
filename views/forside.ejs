@@ -1,0 +1,22 @@
+<% include partials/head %> 
+<% include partials/header %>
+<% include partials/wrapper %>
+
+
+<div id="wrapper2">
+    <section class="forside-nyheder">
+            <% results.forEach( result => { %>
+        <article>
+            <h2><%= result.overskrift %></h2>
+            <h3><%= result.dato %></h3>
+            <p><%= result.tekst %></p>
+            <p><%= result.forfatter %></p>
+        </article>
+        <% }); %>
+        <article></article>
+        <article></article>
+    </section>
+</div>
+</div>
+<% include partials/footer %> 
+<% include partials/after-footer %>
