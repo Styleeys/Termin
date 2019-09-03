@@ -2,10 +2,15 @@ body {
     margin: 0;
 }
 /*============admin====================*/
+#admin-nav {
+    display: flex;
+    justify-content: center;
+}
 #admin-nav a {
-    font-size: 2em;
-    margin: 1em;
-
+    margin: 0 1em;
+    text-decoration: none;
+    color: #ff4a00;
+    font-size: 1.3em;
 }
 /*============Header====================*/
 .logo-banner {
@@ -39,7 +44,14 @@ header nav a {
 #wrapper2 {
     right: 0;
     width: 70%;
+    margin-bottom: 2em;
 }
+.style-box {  /* denne styler alle siderne med dotted line */
+    width: 60%;
+    border-top: 2px dotted #ff4a00;
+    margin-top: 3.3em;
+}
+
 
 section h2 {
     color: #ff4a00;
@@ -72,7 +84,44 @@ section h2 {
     margin: 0 1em;
 }
 /*============Forside nyheder====================*/
+.forside-nyheder article h2 {
+    margin: 1em 0;
+}
+/*============soeg====================*/
 
-.forside-nyheder {
+#soeg {
+    right: 0;
+    width: 70%;
+    position: absolute;
+}
+.soeg-form {
     width: 50%;
+    display: block;
+}
+.soeg-form input {
+    margin: 1em;
+}
+.soeg-form label {
+    margin-right: 1em;
+}
+.chekbox-serie label {
+    margin: 0;
+}
+/*============beskrivelse====================*/
+.beskrivelse {
+    display: flex;
+}
+.beskrivelse img {
+    height: auto;
+    width: 60%;
+}
+.beskrivelse p {
+    margin-left: 1em;
+}
+.varianter h2 {
+    margin-top: 0;
+}
+.varianter img {
+    height: 10em;
+    width: auto;
 }

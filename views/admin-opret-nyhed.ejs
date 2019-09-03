@@ -1,0 +1,36 @@
+<% include partials/head %>
+<% include partials/header %>
+<% include partials/admin %>
+
+<h1>Dette er admin opret nyhed</h1>
+
+
+<form action="/adminOpret" method="POST" enctype="multipart/form-data">
+
+    <h1 class="nytEvent">Opret nyt event</h1>
+    <div id="form_opret_id">
+    <div class="form_opret">
+        <label>Overskrift</label>
+        <input type="text" name="overskrift">
+    </div>
+    <div class="form_opret">
+        <label>Dato</label>
+            <input type="text" name="dato">
+    </div>
+    <div class="form_opret">
+        <label>Tekst</label>
+            <input type="text" name="tekst">
+    </div>
+    <div class="form_opret">
+        <label>Forfatter</label>
+            <input type="text" name="forfatter">
+    </div>
+
+    <button class="btnLogin" type="submit">Opret event</button>
+</div>
+</form>
+
+
+
+<% include partials/footer %> 
+<% include partials/after-footer %>

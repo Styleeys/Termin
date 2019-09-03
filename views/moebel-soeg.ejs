@@ -1,0 +1,54 @@
+<% include partials/head %> 
+<% include partials/header %>
+<% include partials/wrapper %>
+<div id="soeg">
+
+<div class="style-box">
+<form action="" method="get" class="soeg-form">
+    
+    <div>
+        <label for="vare-nr">Vare nr.</label>
+        <input type="text" id="vare-nr">
+    </div>
+
+    <div class="chekbox-serie">
+        <label for="serie">Møbelserie:</label>
+        <label for="sofa">Sofa</label>
+        <input type="checkbox" id="sofa" value="sofa">
+
+        <label for="sofa-bord">Sofa bord</label>
+        <input type="checkbox" id="sofa-bord" value="bord">
+
+        <label for="spise-stol">Spise stol</label>
+        <input type="checkbox" id="spise-stol" value="stol">
+
+        <label for="spise-bord">Spise-bord</label>
+        <input type="checkbox" id="spise-bord" value="bord">
+    </div>
+    
+    
+
+    <div>
+        <label for="designer">Designer:</label>
+        <select id="designer" id="">
+            <option value="Alle">alle</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="design-yy">Design år:</label>
+        <input type="tel" id="design-yy">
+        <input type="tel" id="design-yy">
+    </div>
+
+    <div>
+        <label for="pris">Pris:</label>
+        <input type="tel" id="pris">
+        <input type="tel" id="pris">
+    </div>
+    
+</form>
+</div>
+</div>
+<% include partials/footer %> 
+<% include partials/after-footer %>

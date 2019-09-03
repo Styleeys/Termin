@@ -1,0 +1,13 @@
+<% include partials/head %> 
+<% include partials/header %> 
+<% include partials/admin %>
+
+    <div class="admin-panel">
+        <% results.forEach( result => { %>
+            <a href="/admin/rediger/<%= result.id %>"><%= result.overskrift %></a>
+            <br>
+    <% }); %>
+    </div>
+
+<% include partials/footer %> 
+<% include partials/after-footer %>

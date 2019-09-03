@@ -1,0 +1,31 @@
+<% include partials/head %>
+<% include partials/header %>
+<% include partials/admin %>
+
+<form action="" method="POST" enctype="multipart/form-data">
+    <div id="admin-form">
+        
+        <div class="form-inputs">
+            <label>Overskrift</label>
+            <input type="text" name="overskrift" value="<%= result.overskrift %>">
+        </div>
+    
+        <div class="form-inputs">
+            <label>Dato</label>
+                <input type="text" name="dato" value="<%= result.dato %>">
+        </div>
+    
+        <div class="form-inputs">
+            <label>Tekst</label>
+                <input type="text" name="tekst" value="<%= result.tekst %>">
+        </div>
+    
+        <div class="form-inputs">
+            <label>Forfatter</label>
+                <input type="text" name="forfatter" value="<%= result.forfatter %>">
+        </div>
+    
+        <button type="submit">Gem redigering</button>
+    </div>
+    
+</form>
