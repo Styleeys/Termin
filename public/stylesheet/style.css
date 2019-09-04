@@ -1,5 +1,12 @@
 body {
     margin: 0;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+h2 {
+    font-size: 1.6em;
+}
+p {
+    font-size: 1.2em;
 }
 /*============admin====================*/
 #admin-nav {
@@ -11,6 +18,10 @@ body {
     text-decoration: none;
     color: #ff4a00;
     font-size: 1.3em;
+}
+.vælg th, a, td {
+    font-size: 1.5em;
+    margin: 4px;
 }
 /*============Header====================*/
 .logo-banner {
@@ -49,13 +60,16 @@ header nav a {
 .style-box {  /* denne styler alle siderne med dotted line */
     width: 60%;
     border-top: 2px dotted #ff4a00;
-    margin-top: 3.3em;
+    margin-top: 6em;
 }
 
 
 section h2 {
     color: #ff4a00;
     margin: 1em 1em 0 1em;
+}
+.forside-margin h2 {
+    margin-bottom: 1em;
 }
 .forside-sofa {
     border-top: 2px dotted #ff4a00;
@@ -66,12 +80,20 @@ section h2 {
     color: #ff4a00;
     display: flex;
     justify-content: center;
+    font-size: 1.1em;
 }
 .nyhedsbrev {
     border-top: 2px dotted #ff4a00;
     display: block;
     width: 20em;
     margin: 0 1em;
+}
+.nyhedsbrev input{
+    margin: 10px;
+}
+.nyhedsbrev input {
+    background-color: white;
+    border: 2px solid lightgrey;
 }
 #email {
     margin-right: 10em;
@@ -81,7 +103,9 @@ section h2 {
 .kontakt-oplysninger {
     border-top: 2px dotted #ff4a00;
     width: 20em;
-    margin: 0 1em;
+    margin: 0 1em 1em 1em;
+} .kontakt-oplysninger h3, p {
+    margin: 0;
 }
 /*============Forside nyheder====================*/
 .forside-nyheder article h2 {
@@ -118,10 +142,56 @@ section h2 {
 .beskrivelse p {
     margin-left: 1em;
 }
+.varianter {
+    display: flex;
+}
 .varianter h2 {
     margin-top: 0;
 }
 .varianter img {
     height: 10em;
     width: auto;
+}
+.varianter p {
+    margin: 4px 2.3em;
+}
+/*============møbel liste====================*/
+.style-box-liste {
+    width: 60%;
+    margin-top: 3.3em;
+}
+.liste {
+    display: flex;
+    border-top: 2px dotted #ff4a00;
+    margin-top: 1em;
+}
+.beskrivelse-a {
+    text-decoration: none;
+}
+.liste img {
+    width: 120px;
+    height: 90px;
+    margin: 2em 1em 0 1em;
+}
+.liste p {
+    font-size: .9em;
+}
+.liste:hover {
+    border: 2px solid #717171;
+}
+/*============nyheds arkiv====================*/
+.nyheds-arkiv-margin {
+    margin-bottom: 2em;
+}
+.nyheds-arkiv {
+    display: flex;
+    border-top: 2px dotted #ff4a00;
+}
+.nyheds-arkiv h2 {
+    margin-left: 0;
+    font-size: 1.5em;
+}
+.nyheds-arkiv h3 {
+    margin-top: 2em;
+    margin-left: 1em;
 }

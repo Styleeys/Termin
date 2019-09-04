@@ -3,9 +3,9 @@ module.exports = function(app) {
   
   app.get("/admin/rediger/:id", (req, res, next) => {
     let sql = `SELECT
-		nyheder.overskrift,
+		    nyheder.overskrift,
         nyheder.dato,
-		nyheder.tekst,
+		    nyheder.tekst,
         nyheder.forfatter
         FROM
         nyheder
@@ -16,7 +16,7 @@ module.exports = function(app) {
         res.send("");
         console.log("fejl:" + err);
       } else {
-        res.render("admin-rediger", { result: results[0] });
+        res.render("admin-rediger-nyhed", { result: results[0] });
       }
     });
   });
@@ -42,7 +42,7 @@ module.exports = function(app) {
           res.send("");
           console.log("fejl:" + err);
         } else {
-          res.redirect("/admin");
+          res.redirect("/admin/index");
         }
       }
     );

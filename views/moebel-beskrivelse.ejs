@@ -3,19 +3,30 @@
 <% include partials/wrapper %>
 <div id="wrapper2">
     <section class="style-box">
+            
         <div class="beskrivelse">
-        <h2>Less</h2>
+        <h2><%= result.navn %></h2>
         <img src="/img/sofa.jpg" alt="">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam ipsa sit autem similique, dicta atque velit illum, accusamus voluptate, repellat natus architecto quaerat aperiam animi ut possimus. Commodi, quam alias!Quisquam ipsa sit autem similique, dicta atque velit illum, accusamus voluptate, repellat natus architecto quaerat aperiam animi ut possimus. Commodi, quam alias!</p>
+        <p><%= result.beskrivelse %></p>
     </div>
 
+    <h2>Andre varianter</h2>
         <div class="varianter">
-            <h2>Andre varianter</h2>
             <img src="/img/sofa.jpg" alt="">
             <img src="/img/sofa.jpg" alt="">
             <img src="/img/sofa.jpg" alt="">
+            <div>
+                
+            <p><b>Pris:</b> <%= result.pris %></p>
+            <p><b>Designer:</b> <%= result.designer %></p>
+            <p><b>Møbelserie:</b> <%= result.moebel_serie %></p>
+            <p><b>Designer år:</b> <%= result.designer_yy %></p>
+            <p><b>Varenr:</b> <%= result.vare_nr %></p>
+            
         </div>
-
+            
+        </div>
+       
     </section>
 </div>
 <% include partials/footer %> 

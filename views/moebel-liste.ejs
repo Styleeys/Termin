@@ -1,0 +1,22 @@
+<% include partials/head %> 
+<% include partials/header %>
+<% include partials/wrapper %>
+<div id="wrapper2">
+    <section class="style-box-liste">
+
+        <% results.forEach( result => { %>
+            <a href="/moebel/beskrivelse/<%= result.id %>" class="beskrivelse-a">
+            <article class="liste">
+            <img src="/img/<%= result.billeder %>" alt="">
+        <div class="liste-navn-beskrivelse">
+            <h2><%= result.navn %></h2>
+            <p><%= result.beskrivelse %></p>
+        </div>
+    </article>
+</a>
+        <% }); %>
+
+    </section>
+</div>
+<% include partials/footer %> 
+<% include partials/after-footer %>

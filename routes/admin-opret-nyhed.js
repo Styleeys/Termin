@@ -17,7 +17,7 @@ module.exports = function(app) {
               res.send("");
               console.log("fejl:" + err);
             } else {
-              res.redirect("/admin");
+              res.redirect("/admin/index");
               // data indsat korrekt
             }
           }

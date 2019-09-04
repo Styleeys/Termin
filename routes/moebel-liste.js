@@ -1,6 +1,7 @@
 const db = require("../config/mysql")();
 module.exports = function(app) {
-    app.get("/moebel/beskrivelse/:id", (req, res, next) => {
+
+    app.get("/moebel/liste", (req, res, next) => {
         let sql = `SELECT
             moebler.id,
             moebler.vare_nr,
@@ -12,15 +13,13 @@ module.exports = function(app) {
             moebler.billeder,
             moebler.navn
             FROM
-            termin.moebler
-            WHERE 
-            id = ?`;
-        db.query(sql, [req.params.id], function(err, results) {
+            termin.moebler`;
+        db.query(sql, function(err, results) {
           if (err) {
             res.send("");
             console.log("fejl:" + err);
           } else {
-            res.render("moebel-beskrivelse", { result: results[0] });
+            res.render("moebel-liste", { results: results });
           }
         });
       });

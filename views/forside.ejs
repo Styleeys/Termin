@@ -6,11 +6,11 @@
 <div id="wrapper2">
     <section class="style-box">
             <% results.forEach( result => { %>
-        <article>
+        <article class="forside-margin">
             <h2><%= result.overskrift %></h2>
-            <h3><%= result.dato %></h3>
+            
             <p><%= result.tekst %></p>
-            <p><%= result.forfatter %></p>
+            
         </article>
         <% }); %>
     </section>
