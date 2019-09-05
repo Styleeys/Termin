@@ -1,6 +1,6 @@
 <% include partials/head %> 
 <% include partials/header %>
-<% include partials/wrapper %>
+<% include wrapper %>
 <div id="wrapper2">
     <section class="style-box-liste">
 
@@ -10,7 +10,7 @@
             <img src="/img/<%= result.billeder %>" alt="">
         <div class="liste-navn-beskrivelse">
             <h2><%= result.navn %></h2>
-            <p><%= result.beskrivelse %></p>
+            <p id="selector"><%= result.beskrivelse %></p>
         </div>
     </article>
 </a>

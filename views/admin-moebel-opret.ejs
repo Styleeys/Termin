@@ -1,0 +1,50 @@
+<% include partials/head %>
+<% include partials/header %>
+<% include partials/admin %>
+
+<h1>Dette er admin opret nyt møbel</h1>
+
+
+<form action="/admin/moebel/opret" method="POST" enctype="multipart/form-data">
+
+    <h1 class="nytEvent">Opret møbel</h1>
+
+    <div id="form_opret_id">
+
+    <div class="form_opret">
+        <label>navn</label>
+        <input type="text" name="navn">
+    </div>
+    <div class="form_opret">
+        <label>pris</label>
+            <input type="text" name="pris">
+    </div>
+    <div class="form_opret">
+        <label>designer</label>
+            <input type="text" name="designer">
+    </div>
+    <div class="form_opret">
+        <label>Møbel serie</label>
+            <input type="text" name="moebel_serie">
+    </div>
+    <div class="form_opret">
+        <label>design år</label>
+            <input type="text" name="design_yy">
+    </div>
+    <div class="form_opret">
+        <label>vare nr</label>
+            <input type="text" name="vare_nr">
+    </div>
+    <div class="form_opret">
+        <label>beskrivelse</label>
+            <input type="text" name="beskrivelse">
+    </div>
+
+    <button type="submit">Opret møbel</button>
+</div>
+</form>
+
+
+
+<% include partials/footer %> 
+<% include partials/after-footer %>

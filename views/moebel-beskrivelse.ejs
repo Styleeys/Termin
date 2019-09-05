@@ -1,20 +1,20 @@
 <% include partials/head %> 
 <% include partials/header %>
-<% include partials/wrapper %>
+<% include wrapper %>
 <div id="wrapper2">
     <section class="style-box">
             
         <div class="beskrivelse">
         <h2><%= result.navn %></h2>
-        <img src="/img/sofa.jpg" alt="">
+        <img src="/img/<%= result.billede %>" alt="">
         <p><%= result.beskrivelse %></p>
     </div>
 
     <h2>Andre varianter</h2>
         <div class="varianter">
-            <img src="/img/sofa.jpg" alt="">
-            <img src="/img/sofa.jpg" alt="">
-            <img src="/img/sofa.jpg" alt="">
+            <img src="/img/<%= result.billede_1 %>" alt="">
+            <img src="/img/<%= result.billede_2 %>" alt="">
+            <img src="/img/<%= result.billede_3 %>" alt="">
             <div>
                 
             <p><b>Pris:</b> <%= result.pris %></p>

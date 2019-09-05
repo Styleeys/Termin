@@ -9,7 +9,10 @@ module.exports = function(app) {
             moebler.designer_yy,
             moebler.pris,
             moebler.beskrivelse,
-            moebler.billeder,
+            moebler.billede,
+            moebler.billede_1,
+            moebler.billede_2,
+            moebler.billede_3,
             moebler.navn
             FROM
             termin.moebler

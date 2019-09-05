@@ -17,8 +17,16 @@ p {
     margin: 0 1em;
     text-decoration: none;
     color: #ff4a00;
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
+#admin-nav a:hover {
+    color: #717171;
+}
+.admin-nyhed a, .admin-moebel a {
+    display: block;
+}
+
+
 .vælg th, a, td {
     font-size: 1.5em;
     margin: 4px;
@@ -56,11 +64,12 @@ header nav a {
     right: 0;
     width: 70%;
     margin-bottom: 2em;
+    margin-left: 5%;
 }
 .style-box {  /* denne styler alle siderne med dotted line */
     width: 60%;
     border-top: 2px dotted #ff4a00;
-    margin-top: 6em;
+    margin-top: 3.8em;
 }
 
 
@@ -136,8 +145,8 @@ section h2 {
     display: flex;
 }
 .beskrivelse img {
-    height: auto;
-    width: 60%;
+    height: 225px;
+    min-width: 300px;
 }
 .beskrivelse p {
     margin-left: 1em;
@@ -149,11 +158,12 @@ section h2 {
     margin-top: 0;
 }
 .varianter img {
-    height: 10em;
-    width: auto;
+    height: 140px;
+    width: 140px;
+    margin: 0 5px;
 }
 .varianter p {
-    margin: 4px 2.3em;
+    margin: 4px;
 }
 /*============møbel liste====================*/
 .style-box-liste {
@@ -169,7 +179,7 @@ section h2 {
     text-decoration: none;
 }
 .liste img {
-    width: 120px;
+    min-width: 120px;
     height: 90px;
     margin: 2em 1em 0 1em;
 }
@@ -195,3 +205,20 @@ section h2 {
     margin-top: 2em;
     margin-left: 1em;
 }
+@media only screen and (max-width: 1180px) {
+    .kontakt-oplysninger, .nyhedsbrev {
+        width: 15em;
+    }
+
+}
+@media only screen and (max-width: 1050px) {
+    #wrapper, #wrapper2 {
+        position: relative;
+    }
+    #wrapper2 {
+        width: 100%;
+    }
+    .kontakt-oplysninger, .nyhedsbrev {
+        width: 15em;
+    }
+  }

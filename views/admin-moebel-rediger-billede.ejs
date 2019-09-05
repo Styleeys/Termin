@@ -1,0 +1,19 @@
+<% include partials/head %>
+<% include partials/header %>
+<% include partials/admin %>
+
+<h1>Rediger billede</h1>
+<h2><%= result.navn %></h2>
+<img src="/img/<%= result.billede %>" width="200">
+
+<form action="/img/<%= result.billede %>" method="post" enctype="multipart/form-data">
+    <div class="input">
+        <label for="billede">Vælg en fil</label>
+        <input type="file" name="billede" id="billede">
+    </div>
+    <button type="submit">Upload</button>
+
+</form>
+
+<% include partials/footer %> 
+<% include partials/after-footer %>

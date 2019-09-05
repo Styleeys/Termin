@@ -1,0 +1,50 @@
+<% include partials/head %>
+<% include partials/header %>
+<% include partials/admin %>
+
+<h1>Dette er admin rediger møbel</h1>
+
+
+<form action="" method="POST" enctype="multipart/form-data">
+
+    <h1 class="nytEvent">rediger møbel</h1>
+
+    <div id="form_opret_id">
+
+    <div class="form_opret">
+        <label>navn</label>
+        <input type="text" name="navn" value="<%= result.navn %>">
+    </div>
+    <div class="form_opret">
+        <label>pris</label>
+            <input type="text" name="pris" value="<%= result.pris %>">
+    </div>
+    <div class="form_opret">
+        <label>designer</label>
+            <input type="text" name="designer" value="<%= result.designer %>">
+    </div>
+    <div class="form_opret">
+        <label>Møbel serie</label>
+            <input type="text" name="moebel_serie" value="<%= result.moebel_serie %>">
+    </div>
+    <div class="form_opret">
+        <label>design år</label>
+            <input type="text" name="designer_yy" value="<%= result.designer_yy %>">
+    </div>
+    <div class="form_opret">
+        <label>vare nr</label>
+            <input type="text" name="vare_nr" value="<%= result.vare_nr %>">
+    </div>
+    <div class="form_opret">
+        <label>beskrivelse</label>
+            <input type="text" name="beskrivelse" value="<%= result.beskrivelse %>">
+    </div>
+
+    <button type="submit">rediger møbel</button>
+</div>
+</form>
+
+
+
+<% include partials/footer %> 
+<% include partials/after-footer %>
