@@ -5,6 +5,7 @@ module.exports = function(app) {
     });
 
     app.post("/admin/moebel/opret", (req, res, next) => {
+      //opretter nyt møbel
         db.query(`INSERT INTO moebler (navn, pris, designer, moebel_serie, designer_yy, vare_nr, beskrivelse) VALUES (?, ?, ?, ?, ?, ?, ?)`,
           [
             req.fields.navn,
@@ -16,6 +17,7 @@ module.exports = function(app) {
             req.fields.beskrivelse
           ],
           (err, results) => {
+            //fejlhåndtering
             if (err) {
               res.send("");
               console.log("fejl:" + err);

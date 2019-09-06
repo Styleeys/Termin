@@ -1,0 +1,41 @@
+<% include partials/head %> 
+<% include partials/header %>
+<% include wrapper %>
+<div id="wrapper2">
+    <div class="style-box">
+
+        <div class="kontakt-tider">
+            <h3>Åbningstider:</h3>
+            <p>Mandag-Torsdag fra 10.00-17.30</p>
+            <p>Fredag fra 10.00-18.00</p>
+            <p>Lørdag fra 9.30-14.00</p>
+        </div>
+<div class="center-form">
+        <form action="/kontakt" method="post" id="send-form" enctype='application/x-www-form-urlencoded'>
+            <label for="navn">Navn</label>
+            <input type="text" name="navn" id="navn">
+            <br>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <br>
+
+            <label for="tlf">Telefon</label>
+            <input type="text" name="tlf" id="tlf">
+            <br>
+
+            <label for="adresse">Adresse</label>
+            <input type="text" name="adresse" id="adresse">
+            <br>
+
+            <label for="besked">Komentar</label>
+            <textarea name="besked" id="besked" cols="30" rows="10"></textarea>
+
+            <input type="submit" value="Send">
+        </form>
+    </div>
+</div>
+</div>
+
+    <% include partials/footer %> 
+<% include partials/after-footer %>

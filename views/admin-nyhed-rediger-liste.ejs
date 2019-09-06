@@ -12,17 +12,13 @@
         <tbody>
             <% results.forEach(result => { %>
                 <tr>
-                    <td>
-                        <!-- <form action="/admin/admin/slet/<%= result.id %>" method="post">
-                            <label for="btn"></label>
-                        <input type="submit" id="btn"> -->
-                        </form>
-                        <a href="/admin/nyhed/slet/<%= result.id %>">Slet</a>
+                    <td class="admin-rediger">
+                      
+                        <a href="/admin/nyhed/slet/<%= result.id %>">slet</a>
                         <a href="/admin/nyhed/rediger/<%= result.id %>">Rediger</a></td>
-
                     <td><%= result.overskrift %></td>
                 </tr>
-           <% }); %>
+                <% }); %>
         </tbody>
     </table>
 </div>

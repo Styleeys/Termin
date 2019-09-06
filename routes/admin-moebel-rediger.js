@@ -2,6 +2,7 @@ const db = require("../config/mysql")();
 module.exports = function(app) {
   
   app.get("/admin/moebel/rediger/:id", (req, res, next) => {
+    // selecter 1 møbel efter id 
     let sql = `SELECT
 		    moebler.navn,
         moebler.pris,
@@ -25,6 +26,7 @@ module.exports = function(app) {
   });
 
   app.post("/admin/moebel/rediger/:id", (req, res) => {
+    //opdatere møbel
     let sql = `UPDATE moebler
         SET 
         navn = ?,
@@ -47,6 +49,7 @@ module.exports = function(app) {
         req.params.id
       ],
       (err, results) => {
+        //fejlhåndtering
         if (err) {
           res.send("");
           console.log("fejl:" + err);

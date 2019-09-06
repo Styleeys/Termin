@@ -2,7 +2,7 @@ const db = require("../config/mysql")();
 module.exports = function(app) {
 
     app.get("/nyheds/arkiv", (req, res, next) => {
-        // console.log('session user.id er ' + req.session.user_id); //Chek id
+        //selecter data i orden efter dato
         let sql = `SELECT
             nyheder.id,
             nyheder.overskrift,
@@ -13,6 +13,7 @@ module.exports = function(app) {
             termin.nyheder
             ORDER BY dato DESC`;
         db.query(sql, function(err, results) {
+          //fejlhåndtering
           if (err) {
             res.send("");
             console.log("fejl:" + err);

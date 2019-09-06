@@ -22,8 +22,33 @@ p {
 #admin-nav a:hover {
     color: #717171;
 }
-.admin-nyhed a, .admin-moebel a {
+.admin-moebel a, .admin-nyhed a {
     display: block;
+}
+.admin-rediger-tbody tr {
+    border: 1px solid #717171;
+}
+.admin-rediger a {
+    color: #ff4a00;
+    text-decoration: none;
+    font-weight: 700;
+}
+.admin-rediger a:hover {
+    color: #717171;
+}
+#btn-slet {
+    border: none;
+    font-size: 1.4em;
+    background-color: white;
+}
+.admin-rediger input[target=_btn-slet]:hover {
+    color: #717171;
+}
+.admin-rediger input[target=_btn-slet] {
+    color: #ff4a00;
+}
+.rediger-border {
+    border: 2px solid #717171;
 }
 
 
@@ -205,6 +230,16 @@ section h2 {
     margin-top: 2em;
     margin-left: 1em;
 }
+/*==================Kontakt======================*/
+.center-form {
+    display: flex;
+    justify-content: left;
+}
+.center-form input {
+    margin: 1em 2em;
+    
+}
+
 @media only screen and (max-width: 1180px) {
     .kontakt-oplysninger, .nyhedsbrev {
         width: 15em;

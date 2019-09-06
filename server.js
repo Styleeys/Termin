@@ -1,4 +1,8 @@
+//loader alle npm pakker
 const express = require('express');
+var bodyParser = require('body-parser');
+var multer  = require('multer')
+var upload = multer();
 const app = express();
 
 const session = require('./config/session')(app);
@@ -13,18 +17,30 @@ const formadable = require('express-formidable');
 app.use(formadable());
 
 const fs = require('fs');
+// for parsing application/json
+app.use(bodyParser.json());
 
+// for parsing application/xwww-
+app.use(bodyParser.urlencoded({ extended: true }));
+//form-urlencoded
+
+// for parsing multipart/form-data
+app.use(upload.array());
 app.use(express.static('./public'));
 
 require('dotenv').config()
 
 
-
+// for protected routes
 let protectedRoutes = [
     '/admin/index',
     '/admin/nyhed/opret',
     '/admin/nyhed/rediger/liste',
-    '/admin/nyhed/rediger'
+    '/admin/nyhed/rediger',
+
+    '/admin/moebel/opret',
+    '/admin/moebel/rediger/liste',
+    '/admin/moebel/rediger',
 ];
 
 app.use(protectedRoutes, (req, res, next) => {
@@ -37,9 +53,10 @@ app.use(protectedRoutes, (req, res, next) => {
 });
 
 
-
+// require all js files via module exports
 require('./routes/nyheds-arkiv')(app);
 require('./routes/forside')(app);
+require('./routes/kontakt')(app);
 require('./routes/wrapper')(app);
 
 require('./routes/admin-login')(app);
@@ -57,10 +74,9 @@ require('./routes/admin-moebel-opret')(app);
 require('./routes/admin-moebel-rediger-billede')(app);
 require('./routes/admin-moebel-rediger-liste')(app);
 require('./routes/admin-moebel-rediger')(app);
-// require('./routes/admin-moebel-slet')(app);
+require('./routes/admin-moebel-slet')(app);
 
-
-
+// lytter på hvilken port sereven skal kører på
 app.listen(3000, () => {
     console.log('http://localhost:3000');
 })

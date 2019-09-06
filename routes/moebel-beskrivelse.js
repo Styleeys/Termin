@@ -1,6 +1,7 @@
 const db = require("../config/mysql")();
 module.exports = function(app) {
     app.get("/moebel/beskrivelse/:id", (req, res, next) => {
+      //selecter alt til beskrivelses siden
         let sql = `SELECT
             moebler.id,
             moebler.vare_nr,
@@ -19,6 +20,7 @@ module.exports = function(app) {
             WHERE 
             id = ?`;
         db.query(sql, [req.params.id], function(err, results) {
+          //fejlhåndtering
           if (err) {
             res.send("");
             console.log("fejl:" + err);

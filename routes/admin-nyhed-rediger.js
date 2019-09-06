@@ -2,6 +2,7 @@ const db = require("../config/mysql")();
 module.exports = function(app) {
   
   app.get("/admin/nyhed/rediger/:id", (req, res, next) => {
+    // selecter 1 nyheder efter id 
     let sql = `SELECT
 		    nyheder.overskrift,
         nyheder.dato,
@@ -12,6 +13,7 @@ module.exports = function(app) {
         WHERE
         id = ?`;
     db.query(sql, [req.params.id], function(err, results) {
+      //fejlhåndtering
       if (err) {
         res.send("");
         console.log("fejl:" + err);
@@ -22,6 +24,7 @@ module.exports = function(app) {
   });
 
   app.post("/admin/nyhed/rediger/:id", (req, res) => {
+    //opdatere nyhed
     let sql = `UPDATE nyheder
         SET 
         overskrift = ?,

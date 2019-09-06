@@ -15,6 +15,7 @@ module.exports = function(app) {
             FROM
             termin.moebler`;
         db.query(sql, function(err, results) {
+          //fejlhåndtering
           if (err) {
             res.send("");
             console.log("fejl:" + err);

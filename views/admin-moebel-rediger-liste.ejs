@@ -12,18 +12,15 @@
         <tbody>
             <% results.forEach(result => { %>
                 <tr>
-                    <td>
-                        <!-- <form action="/admin/admin/slet/<%= result.id %>" method="post">
-                            <label for="btn"></label>
-                        <input type="submit" id="btn"> -->
-                        </form>
-                        <a href="/admin/moebel/slet/<%= result.id %>">Slet</a>
-                        <a href="/admin/moebel/rediger/<%= result.id %>">Rediger</a></td>
-                        <a href="/admin/moebel/rediger/billede/<%= result.id %>">Opret/rediger billede</a></td>
-
+                    <td class="admin-rediger">
+                           
+                                
+                            <a href="/admin/moebel/slet/<%= result.id %>">slet</a>
+                            <a href="/admin/moebel/rediger/<%= result.id %>">Rediger</a>
+                            <a href="/admin/moebel/rediger/billede/<%= result.id %>">Opret/rediger billede</a></td>
                     <td><%= result.navn %></td>
                 </tr>
-           <% }); %>
+                <% }); %>
         </tbody>
     </table>
 </div>
